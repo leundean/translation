@@ -71,6 +71,16 @@ Example:
 Example:
 /maxlength/open  -\> {"key": "open", tl": "7"} or Response-code: BAD_REQUEST
 
+### GET /allkeys, /allkeys/\<code\>
+
+Example:
+/allkeys/en -\> ["open", "close"]
+
+### GET /alltls, /alltls/\<code\>
+
+Example:
+/alltls/en -\> [{"key": ""open", tls: {"en": "open"}, {"key": "close", tls: {"en": "close}"]
+
 ### GET /info
 
 Example:
