@@ -42,41 +42,36 @@ Example:
 /add/se
 Request-body: {"key": "open", "tl": "öppna"} -> Response-code: OK
 
-GET
-/add/<code>/<placeholder-key>/<translation-lang>
+### GET /add/<code>/<placeholder-key>/<translation-lang>
 
 Example:
 /add/se/open/%C3%B6ppna -> Response-code: OK
 
-DELETE
-/delete/<placeholder-key>
+### DELETE /delete/<placeholder-key>
 
 Example:
 /delete/open -> Response-codes: OK or NO_CONTENT
 
-DELETE
-/delete-language/<code>/<placeholder-key>
+### DELETE /delete-language/<code>/<placeholder-key>
 
 Example:
 /delete-language/se/open -> Response-codes: OK or NO_CONTENT
 
-GET
-/<code>/<placeholder-key>
+### GET /<code>/<placeholder-key>
 
-Example:
-/se/open -> {"key: "open", "tl":"öppna"} or Response-code: NO_CONTENT
+Example: /se/open -> {"key: "open", "tl":"öppna"} or Response-code: NO_CONTENT
 
-GET
-/source/<code>/<query-code>/<query-translation>
+### GET /source/<code>/<query-code>/<query-translation>
 
 Example:
 /source/en/se/%C3%B6ppna -> {"key: "open", "tl":"open"} or Response-code: NO_CONTENT
 
-GET
-/maxlength/<placeholder-tag>
+### GET /maxlength/<placeholder-tag>
 
 Example:
 /maxlength/open  -> {"key": "open", tl": "7"} or Response-code: BAD_REQUEST
 
-GET
+### GET /info
+
+Example:
 /info -> {"dbname": "translang","size": "4"}
