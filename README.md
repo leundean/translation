@@ -16,62 +16,62 @@ This is a simple microservice for storing text strings (such as GUI-labels) and 
 
 ## Installation and use instructions
 
-1. Install MongoDB (free community version available) <https://www.mongodb.com/try/download/community>
+1. Install MongoDB (free community version available) \<https://www.mongodb.com/try/download/community\>
 2. Start "mongodb" service
 3. Clone and open this project (IntelliJ IDEA)
 4. If necessery change properties for server address, port, dbname in "application.properties"
 5. Build project with Maven
 6. Run project
-7. Doublecheck entries with "mongo" cli ("use <dbname>", "use <tablename>", and e.g. "db.<tablename>.find()" for listing all values)
+7. Doublecheck entries with "mongo" cli ("use \<dbname\>", "use \<tablename\>", and e.g. "db.\<tablename\>.find()" for listing all values)
 
 
 
 ## API
 
 ### POST /create
-Request-body: {"key": "\<placeholder-key\>", "tls": {"<code1>":"<translation-lang1>", "<code2>":"<translation-lang2>", ...}}
+Request-body: {"key": "\<placeholder-key\>", "tls": {"\<code1\>":"\<translation-lang1\>", "\<code2\>":"\<translation-lang2\>", ...}}
 
 Example:
 /create
-Request-body: {"key": "open", "tls": {"se":"öppna", "de":"öffnen"}} -> Response-code: OK
+Request-body: {"key": "open", "tls": {"se":"öppna", "de":"öffnen"}} -\> Response-code: OK
 
-### POST /add/<code>
-Request-body: {"key": "<placeholder-key>", "tl":"<translation-lang>"}
+### POST /add/\<code\>
+Request-body: {"key": "\<placeholder-key\>", "tl":"\<translation-lang\>"}
 
 Example:
 /add/se
-Request-body: {"key": "open", "tl": "öppna"} -> Response-code: OK
+Request-body: {"key": "open", "tl": "öppna"} -\> Response-code: OK
 
-### GET /add/<code>/<placeholder-key>/<translation-lang>
-
-Example:
-/add/se/open/%C3%B6ppna -> Response-code: OK
-
-### DELETE /delete/<placeholder-key>
+### GET /add/\<code\>/\<placeholder-key\>/\<translation-lang\>
 
 Example:
-/delete/open -> Response-codes: OK or NO_CONTENT
+/add/se/open/%C3%B6ppna -\> Response-code: OK
 
-### DELETE /delete-language/<code>/<placeholder-key>
-
-Example:
-/delete-language/se/open -> Response-codes: OK or NO_CONTENT
-
-### GET /<code>/<placeholder-key>
-
-Example: /se/open -> {"key: "open", "tl":"öppna"} or Response-code: NO_CONTENT
-
-### GET /source/<code>/<query-code>/<query-translation>
+### DELETE /delete/\<placeholder-key\>
 
 Example:
-/source/en/se/%C3%B6ppna -> {"key: "open", "tl":"open"} or Response-code: NO_CONTENT
+/delete/open -\> Response-codes: OK or NO_CONTENT
 
-### GET /maxlength/<placeholder-tag>
+### DELETE /delete-language/\<code\>/\<placeholder-key\>
 
 Example:
-/maxlength/open  -> {"key": "open", tl": "7"} or Response-code: BAD_REQUEST
+/delete-language/se/open -\> Response-codes: OK or NO_CONTENT
+
+### GET /\<code\>/\<placeholder-key\>
+
+Example: /se/open -\> {"key: "open", "tl":"öppna"} or Response-code: NO_CONTENT
+
+### GET /source/\<code\>/\<query-code\>/\<query-translation\>
+
+Example:
+/source/en/se/%C3%B6ppna -\> {"key: "open", "tl":"open"} or Response-code: NO_CONTENT
+
+### GET /maxlength/\<placeholder-tag\>
+
+Example:
+/maxlength/open  -\> {"key": "open", tl": "7"} or Response-code: BAD_REQUEST
 
 ### GET /info
 
 Example:
-/info -> {"dbname": "translang","size": "4"}
+/info -\> {"dbname": "translang","size": "4"}
