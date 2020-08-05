@@ -29,7 +29,7 @@ This is a simple microservice for storing text strings (such as GUI-labels) and 
 ## API
 
 ### POST /create
-Request-body: {"key": "<placeholder-key>", "tls": {"<code1>":"<translation-lang1>", "<code2>":"<translation-lang2>", ...}}
+Request-body: {"key": "\<placeholder-key\>", "tls": {"<code1>":"<translation-lang1>", "<code2>":"<translation-lang2>", ...}}
 
 Example:
 /create
