@@ -14,11 +14,11 @@ This is a simple microservice for storing text strings (such as GUI-labels) and 
 - Integration tests (JUnit) with Spring WebTestClient
 - Persistent storage in MongoDB
 
-Installation and use instructions
+## Installation and use instructions
 
-1. Install MongoDB <>
+1. Install MongoDB (free community version available) <https://www.mongodb.com/try/download/community>
 2. Start mongodb service
-3. Clone and open this git project (IntelliJ)
+3. Clone and open this project (IntelliJ IDEA)
 4. If necessery change properties for server address, port, dbname in "application.properties"
 5. Build project with Maven
 6. Run project
@@ -26,18 +26,16 @@ Installation and use instructions
 
 
 
-API
+## API
 
-POST
-/create
+### POST /create
 Request-body: {"key": "<placeholder-key>", "tls": {"<code1>":"<translation-lang1>", "<code2>":"<translation-lang2>", ...}}
 
 Example:
 /create
 Request-body: {"key": "open", "tls": {"se":"öppna", "de":"öffnen"}} -> Response-code: OK
 
-POST
-/add/<code>
+### POST /add/<code>
 Request-body: {"key": "<placeholder-key>", "tl":"<translation-lang>"}
 
 Example:
