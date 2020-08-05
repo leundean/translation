@@ -29,18 +29,18 @@ This is a simple microservice for storing text strings (such as GUI-labels) and 
 ## API
 
 ### POST /create
-Request-body: {"key": "\<placeholder-key\>", "tls": {"\<code1\>":"\<translation-lang1\>", "\<code2\>":"\<translation-lang2\>", ...}}
+Req-body: {"key": "\<placeholder-key\>", "tls": {"\<code1\>":"\<translation-lang1\>", "\<code2\>":"\<translation-lang2\>", ...}}
 
 Example:
 /create
-Request-body: {"key": "open", "tls": {"se":"öppna", "de":"öffnen"}} -\> Response-code: OK
+Req-body: {"key": "open", "tls": {"se":"öppna", "de":"öffnen"}} -\> Response-code: OK
 
 ### POST /add/\<code\>
-Request-body: {"key": "\<placeholder-key\>", "tl":"\<translation-lang\>"}
+Req-body: {"key": "\<placeholder-key\>", "tl":"\<translation-lang\>"}
 
 Example:
 /add/se
-Request-body: {"key": "open", "tl": "öppna"} -\> Response-code: OK
+Req-body: {"key": "open", "tl": "öppna"} -\> Response-code: OK
 
 ### GET /add/\<code\>/\<placeholder-key\>/\<translation-lang\>
 
@@ -50,12 +50,12 @@ Example:
 ### DELETE /delete/\<placeholder-key\>
 
 Example:
-/delete/open -\> Response-codes: OK or NO_CONTENT
+/delete/open -\> Response-code: OK or NO_CONTENT
 
 ### DELETE /delete-language/\<code\>/\<placeholder-key\>
 
 Example:
-/delete-language/se/open -\> Response-codes: OK or NO_CONTENT
+/delete-language/se/open -\> Response-code: OK or NO_CONTENT
 
 ### GET /\<code\>/\<placeholder-key\>
 
