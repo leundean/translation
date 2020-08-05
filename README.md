@@ -17,12 +17,12 @@ This is a simple microservice for storing text strings (such as GUI-labels) and 
 ## Installation and use instructions
 
 1. Install MongoDB (free community version available) <https://www.mongodb.com/try/download/community>
-2. Start mongodb service
+2. Start "mongodb" service
 3. Clone and open this project (IntelliJ IDEA)
 4. If necessery change properties for server address, port, dbname in "application.properties"
 5. Build project with Maven
 6. Run project
-7. Doublecheck entries with mongo command-line client ("use dbname", "use <tablename>", "e.g db.<tablename>.find() for listing all values")
+7. Doublecheck entries with "mongo" cli ("use <dbname>", "use <tablename>", and e.g. "db.<tablename>.find()" for listing all values)
 
 
 
