@@ -4,7 +4,7 @@ This is a simple microservice for storing text strings (such as GUI-labels) and 
 
 - Creating/Updating a placeholder key (e.g. "open") and translations (e.g. language-code: "se", language-translation: "öppna")
 - All additions are idempotent: If no value exist (placeholder key or translation) it is created. If already existing it is updated/overwritten.
-- Additions of key and one or multiple translations uses a request body object. A single translation can be made with a simple object, and even more simple additions can be made in the URL (be sure to URLEncode if so).
+- Additions of key and one or multiple translations uses a request body object. A single translation can be made with a simple object, and even without an object with the URL (URLEncode if so).
 - Removing a placeholder key with its translations OR removing a particular translation
 - Retrieving all placeholder keys AND/OR translations
 - Getting the maximum translated length for a key (e.g for use in GUI buttons with limited space)
