@@ -1,0 +1,8 @@
+translation/service/TranslationService.class
+translation/service/ITranslationService.class
+translation/model/Translation.class
+translation/Application.class
+translation/service/ReactiveTranslationService.class
+translation/ctrl/TranslationCtrl.class
+translation/ReactiveTranslationRepository.class
+translation/TranslationRepository.class

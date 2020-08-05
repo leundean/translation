@@ -1,0 +1,9 @@
+/home/lceo/IdeaProjects/translation/src/main/java/translation/TranslationRepository.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/service/ReactiveTranslationService.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/ReactiveTranslationRepository.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/ctrl/TranslationCtrl.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/Application.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/model/TargetLanguage.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/service/TranslationService.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/service/ITranslationService.java
+/home/lceo/IdeaProjects/translation/src/main/java/translation/model/Translation.java
